@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    {%  for rows in cur.execute("SELECT * FROM posts") %}
+        <a href="http://localhost/{{ row[0] }}">{{ rows[1] }}</a>
+    {% endfor  %}
+</body>
+</html>
